@@ -36,7 +36,7 @@ INSERT INTO tb_selecoes (id, abrev, selecao, grupo, cor) VALUES
 (16, 'TUN', 'Tunísia', 'D', '#fff'),
 (17, 'ESP', 'Espanha', 'E', '#fff'),
 (18, 'CRC', 'Costa Rica', 'E', '#fff'),
-(19, 'ALE', 'Alemanha', 'E', '#fff'),
+(19, 'ALE', 'Alemnha', 'E', '#fff'),
 (20, 'JPN', 'Japão', 'E', '#fff'),
 (21, 'BEL', 'Bélgica', 'F', '#fff'),
 (22, 'CAN', 'Canadá', 'F', '#fff'),

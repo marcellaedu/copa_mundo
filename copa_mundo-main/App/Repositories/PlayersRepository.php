@@ -46,15 +46,4 @@ class PlayersRepository {
 
         return $table->fetch(PDO::FETCH_ASSOC);
     }
-
-    public function getByTeamId(int $idSelecao){
-        $sql = "SELECT * FROM tb_jogadores WHERE selecao = :idSelecao";
-
-        $table = $this->connection->prepare($sql); 
-        $table->bindParam(":idSelecao", $idSelecao);
-
-        $table->execute();
-
-        return $table->fetchAll(PDO::FETCH_ASSOC);
-    }
 }

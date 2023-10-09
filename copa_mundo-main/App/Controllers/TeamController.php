@@ -5,13 +5,13 @@ namespace App\Controllers;
 use Slim\Http\Request;
 use Slim\Http\Response;
 use App\Repositories\TeamRepository;
-use App\Repositories\PlayersRepository;
+use App\Repositories\PlayerRepository;
 
 class TeamController {
 
     private mixed $container;
     private TeamRepository $teamRepository;
-    private PlayersRepository $playerRepository;
+    private PlayerRepository $playerRepository;
 
     public function __construct($container)
     {
@@ -20,7 +20,6 @@ class TeamController {
         //Substitua as interrogações por TeamRepository
         //Use esse objeto ($this->teamRepository) para acessar todas as operações com bancos de dados
         $this->teamRepository = new TeamRepository();
-        $this->playerRepository = new PlayersRepository();
     }
 
     /**
@@ -35,7 +34,7 @@ class TeamController {
      */
     public function getAll(Request $request, Response $response, array $params){
 
-        //Procure no arquivo TeamRepository um método que retorne uma lista de todoas as seleções;
+        //Procure uma arquivo TeamRepository um método que retorne uma lista de todoas as seleções;
         //Normalmente a operação se parece com algo do tipo: SELECT * FROM ...
         $data['teams'] = $this->teamRepository->getAll();
 
@@ -50,11 +49,6 @@ class TeamController {
 
         $data['team'] = $this->teamRepository->getById($teamId);
         $data['players'] = $this->playerRepository->getByTeamId($teamId);
-
-        // print '<pre>';
-        // print_r($data);
-        // print '</pre>';
-        // die;
 
         return $this->container->view->render($response, 'team.php', $data);
     }

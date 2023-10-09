@@ -5,38 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copa do mundo</title>
+    <title>Document</title>
 
-    <link rel="stylesheet" href="<?= $BASE_PATH ?>/Public/assets/styles/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= $BASE_PATH ?>/Public/assets/styles/style.css">
-    <link rel="stylesheet" href="<?= $BASE_PATH ?>/Public/assets/styles/team.css">
-    <link rel="stylesheet" href="<?= $BASE_PATH ?>/Public/assets/styles/players.css">
+    <link rel="stylesheet" href="http://localhost:8080/Public/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:8080/Public/assets/styles/style.css">
+    <link rel="stylesheet" href="http://localhost:8080/Public/assets/styles/team.css">
+    <link rel="stylesheet" href="http://localhost:8080/Public/assets/styles/players.css">
 </head>
 
 <body>
 
     <div class="container">
         <header>
-            <a class="navbar-brand" href="<?= $BASE_PATH ?>">
-                <img src="<?= $BASE_PATH ?>/Public/images/logos/logo.webp" height="80px" width="auto" style="text-align: center;" alt="">
+            <a class="navbar-brand" href="http://localhost:8080/">
+                <img src="http://localhost:8080/Public/images/logos/logo.webp" height="80px" width="auto" style="text-align: center;" alt="">
             </a>
 
             <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link active" href="<?= $BASE_PATH ?>">Home (aleatórios)</a>
+                  <a class="nav-link active" href="http://localhost:8080/">Home (aleatórios)</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?= $BASE_PATH ?>/teams">Seleções</a>
+                  <a class="nav-link" href="http://localhost:8080/teams">Seleções</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?= $BASE_PATH ?>/teams/25">Brasil</a>
+                  <a class="nav-link" href="http://localhost:8080/teams/25">Brasil</a>
                 </li>
 
               </ul>
         
         </header>
 
-        <h2 class="title">Album de Figurinhas</h2>
+        <h2 class="title">Album de IFigurinhas</h2>
         <h5 class="subtitle">Catar 2022</h5>
 
         <h3 class="subtitle"> Seleção Aleatória</h3>
@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="col-7">
-                                <img src="<?= $BASE_PATH ?>/Public/images/emblem/<?= strtolower($players[0]['selecao'])?>.png" class="img img-responsive">
+                                <img src="http://localhost:8080/Public/images/emblem/<?= strtolower($players[0]['selecao'])?>.png" class="img img-responsive">
                             </div>
                         </div>
                     </div>
@@ -74,13 +74,13 @@
                         <?php
                         if(!file_exists(__DIR__ . "/../../Public/images/players/{$player['selecao']}/{$player['nome']}.png")) {
 
-                            $path = "{$BASE_PATH}/Public/images/players/default.png";
+                            $path = "http://localhost:8080/Public/images/players/default.png";
                         } else {
-                            $path = "{$BASE_PATH}/Public/images/players/{$player['selecao']}/{$player['nome']}.png";
+                            $path = "http://localhost:8080/Public/images/players/{$player['selecao']}/{$player['nome']}.png";
                         }
                         ?>
 
-                        <img src="<?= $BASE_PATH ?>/Public/images/escudos/<?= strtolower($player['selecao'])?>.png" class="escudo">
+                        <img src="http://localhost:8080/Public/images/escudos/<?= strtolower($player['selecao'])?>.png" class="escudo">
 
                         <img src="<?= $path ?>" class="img img-responsive">
                         <div class="profile-name"><?= $player['nome'] ?></div>

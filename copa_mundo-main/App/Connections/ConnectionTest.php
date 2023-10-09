@@ -2,7 +2,7 @@
 
 namespace App\Connections;
 
-include __DIR__ . "/../../vendor/autoload.php";
+//include __DIR__ . "/../../vendor/autoload.php";
 
 
 use Exception;
@@ -26,5 +26,5 @@ class ConnectionTest{
 
 }
 
-$conn = new ConnectionTest();
-$conn->test();
+//$conn = new ConnectionTest();
+//$conn->test();

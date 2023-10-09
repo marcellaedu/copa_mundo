@@ -26,12 +26,12 @@ class PlayerController {
         //Substitua as interrogações por "getById"
         $data['player'] = $this->repository->getById($id);
 
-        // print "<h1>Essa rota não possui uma tela associada</h1><br/>";
+        print "<h1>Essa rota não possui uma tela associada</h1><br/>";
 
-        // print_r($data);
-        // exit;
+        print_r($data);
+        exit;
 
-        return $this->container->view->render($response, 'player.php', $data);
+        return $this->container->view->render($response, '???.php', $data);
     }
 
     public function getByName(Request $request, Response $response, array $params){
@@ -43,11 +43,11 @@ class PlayerController {
         //Substitua as interrogações por "getByName"
         $data['players'] = $this->repository->getByName($name);
 
-        // print "<h1>Essa rota não possui uma tela associada</h1><br/>";
-        // print_r($data);
-        // exit;
+        print "<h1>Essa rota não possui uma tela associada</h1><br/>";
+        print_r($data);
+        exit;
 
-        return $this->container->view->render($response, 'players.php', $data);
+        return $this->container->view->render($response, '???.php', $data);
     }
 
 }

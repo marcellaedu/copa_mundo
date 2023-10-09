@@ -28,8 +28,6 @@ class HomeController {
      * @return void
      */
     public function home(Request $request, Response $response, array $params){
-         
-        $data['BASE_PATH'] = $this->container->BASE_PATH;
 
         //Substitua as interrogações pelo número de jogadores que você deseja que seja exibido na home page
         $numberOfPlayers = 11;
